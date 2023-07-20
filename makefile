@@ -1,8 +1,8 @@
 CXX = g++
 CXXFLAGS = -Wall -g
 
-proj3: MusicPlayer.o Song.o proj3.cpp Playlist.o
-	$(CXX) $(CXXFLAGS) MusicPlayer.o Song.o Playlist.o proj3.cpp -o proj3
+proj3: MusicPlayer.o Song.o main.cpp Playlist.o
+	$(CXX) $(CXXFLAGS) MusicPlayer.o Song.o Playlist.o main.cpp -o proj3
 
 MusicPlayer.o: MusicPlayer.cpp  MusicPlayer.h Playlist.o Song.o
 	$(CXX) $(CXXFLAGS) -c MusicPlayer.cpp
